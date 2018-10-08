@@ -5,10 +5,10 @@
   "options_page": "options.html",
   "browser_action": {
     "default_icon": "copyurl.png",
-    "default_title": "copy title+url to clipboard",
+    "default_title": "URL and Title Copier",
     "default_popup": "popup.html"
   },
-  "description": "Copy Url, w/ Markdown format to clipboard",
+  "description": "URL and Title Copier",
   "icons": {
     "48": "copyurl.png"
   },
@@ -19,6 +19,6 @@
     "contextMenus",
     "background"
   ],
-  "version": "0.0.2",
-  "manifest_version": 2
+  "version": "0.0.1",
+  "manifest_version": 1
 }
