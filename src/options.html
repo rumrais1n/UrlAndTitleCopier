@@ -1,0 +1,21 @@
+<html>
+<head><title>Copy Title+URL to clipboard Options</title></head>
+<script type="text/javascript" src="copyAndSaveOptions.js">
+ document.addEventListener( 'load', restore_options )
+</script>
+
+ <body>
+TITLE ... URL Separator:
+<select id="separator">
+ <option value="str">string</option>
+ <option value="tab">TAB</option>
+ <option value="cr">CR</option>
+</select>
+
+<input id="separator_str" value=":" />
+
+<br>
+<button id="save_button">Save</button>
+<div id="status"></div>
+</body>
+</html>

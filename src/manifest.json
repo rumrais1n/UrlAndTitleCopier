@@ -1,0 +1,24 @@
+{
+  "background": {
+  "page": "background.html"
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "copyurl.png",
+    "default_title": "copy title+url to clipboard",
+    "default_popup": "popup.html"
+  },
+  "description": "Copy Url, w/ Markdown format to clipboard",
+  "icons": {
+    "48": "copyurl.png"
+  },
+  "name": "Copy Url Title to clipboard",
+  "permissions": [
+    "tabs",
+    "http://goo.gl/*",
+    "contextMenus",
+    "background"
+  ],
+  "version": "0.0.2",
+  "manifest_version": 2
+}
