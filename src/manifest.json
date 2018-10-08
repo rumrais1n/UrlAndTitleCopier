@@ -8,11 +8,11 @@
     "default_title": "URL and Title Copier",
     "default_popup": "popup.html"
   },
-  "description": "URL and Title Copier",
+  "description": "URLとタイトルをWebページから取得します",
   "icons": {
     "48": "copyurl.png"
   },
-  "name": "Copy Url Title to clipboard",
+  "name": "URL and Title Copier",
   "permissions": [
     "tabs",
     "http://goo.gl/*",
@@ -20,5 +20,5 @@
     "background"
   ],
   "version": "0.0.1",
-  "manifest_version": 1
+  "manifest_version": 2
 }
