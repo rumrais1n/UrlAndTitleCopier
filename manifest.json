@@ -1,16 +1,16 @@
 {
   "background": {
-  "page": "background.html"
+  "page": "src/background.html"
   },
-  "options_page": "options.html",
+  "options_page": "src/options.html",
   "browser_action": {
-    "default_icon": "copyurl.png",
+    "default_icon": "img/icon.png",
     "default_title": "URL and Title Copier",
-    "default_popup": "popup.html"
+    "default_popup": "src/popup.html"
   },
   "description": "URLとタイトルをWebページから取得します",
   "icons": {
-    "48": "copyurl.png"
+    "48": "img/copyurl.png"
   },
   "name": "URL and Title Copier",
   "permissions": [
@@ -19,6 +19,6 @@
     "contextMenus",
     "background"
   ],
-  "version": "0.0.1",
+  "version": "0.1.0",
   "manifest_version": 2
 }
