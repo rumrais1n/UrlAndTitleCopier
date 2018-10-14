@@ -4,7 +4,7 @@
   },
   "options_page": "src/options.html",
   "browser_action": {
-    "default_icon": "img/icon.png",
+    "default_icon": "img/favicon.png",
     "default_title": "URL and Title Copier",
     "default_popup": "src/popup.html"
   },
@@ -19,6 +19,6 @@
     "contextMenus",
     "background"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "manifest_version": 2
 }
