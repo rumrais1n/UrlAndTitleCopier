@@ -2,3 +2,5 @@
 dist/*.pem
 *.pem
 .idea/*
+dist/*
+dist/
