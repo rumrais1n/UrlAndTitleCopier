@@ -54,7 +54,7 @@ function copytitleurlshorten() {
 	document.getElementById('indicator').style.visibility = 'visible'; 
 	chrome.tabs.getSelected(this.jstdata, function(tab) {
 	  var url = tab.url;
-	  var     xmlhttp = new XMLHttpRequest();
+	  var xmlhttp = new XMLHttpRequest();
 	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getToken(url), false);
 	  xmlhttp.onload = function(){
 	      var object = JSON.parse(xmlhttp.responseText);
@@ -74,7 +74,7 @@ function copytitleurlshorten() {
 function copyselectiontitleshorten(selection) {
 	chrome.tabs.getSelected(this.jstdata, function(tab) {
 	  var url = tab.url;
-	  var     xmlhttp = new XMLHttpRequest();
+	  var xmlhttp = new XMLHttpRequest();
 	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getToken(url), false);
 	  xmlhttp.onload = function(){
 	      var object = JSON.parse(xmlhttp.responseText);
