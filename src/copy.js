@@ -55,7 +55,7 @@ function copytitleurlshorten() {
 	chrome.tabs.getSelected(this.jstdata, function(tab) {
 	  var url = tab.url;
 	  var xmlhttp = new XMLHttpRequest();
-	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getToken(url), false);
+	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getAuthToken(url), false);
 	  xmlhttp.onload = function(){
 	      var object = JSON.parse(xmlhttp.responseText);
 	      if(object["short_url"] != undefined){
@@ -75,7 +75,7 @@ function copyselectiontitleshorten(selection) {
 	chrome.tabs.getSelected(this.jstdata, function(tab) {
 	  var url = tab.url;
 	  var xmlhttp = new XMLHttpRequest();
-	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getToken(url), false);
+	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getAuthToken(url), false);
 	  xmlhttp.onload = function(){
 	      var object = JSON.parse(xmlhttp.responseText);
 	      if(object["short_url"] != undefined){
