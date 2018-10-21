@@ -10,7 +10,7 @@
   },
   "description": "URLとタイトルをWebページから取得します",
   "icons": {
-    "48": "img/copyurl.png"
+    "48": "img/icon_1000.png"
   },
   "name": "URL and Title Copier",
   "permissions": [
