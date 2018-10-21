@@ -4,3 +4,4 @@ dist/*.pem
 .idea/*
 dist/*
 dist/
+./makeZipPackage.sh
