@@ -50,46 +50,6 @@ function copytitleurl() {
 	});
 }
 
-function copytitleurlshorten() {
-	document.getElementById('indicator').style.visibility = 'visible'; 
-	chrome.tabs.getSelected(this.jstdata, function(tab) {
-	  var url = tab.url;
-	  var xmlhttp = new XMLHttpRequest();
-	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getAuthToken(url), false);
-	  xmlhttp.onload = function(){
-	      var object = JSON.parse(xmlhttp.responseText);
-	      if(object["short_url"] != undefined){
-	        if( tab.title ){
-	          copyToClipboard( tab.title + getSeps() + object["short_url"] );
-	        } else {
-	          copyToClipboard( object["short_url"] );
-	        }
-	      }
-	      document.getElementById('indicator').style.visibility = 'hidden'; 
-	      window.close();
-	    };
-	  xmlhttp.send(null);
-	});
-}
-function copyselectiontitleshorten(selection) {
-	chrome.tabs.getSelected(this.jstdata, function(tab) {
-	  var url = tab.url;
-	  var xmlhttp = new XMLHttpRequest();
-	  xmlhttp.open("POST", "http://goo.gl/api/url?user=toolbar@google.com&url=" + encodeURIComponent(url) + "&auth_token=" + getAuthToken(url), false);
-	  xmlhttp.onload = function(){
-	      var object = JSON.parse(xmlhttp.responseText);
-	      if(object["short_url"] != undefined){
-	        if( tab.title ){
-	          copyToClipboard( selection + getSeps() + tab.title + getSeps() + object["short_url"] );
-	        } else {
-	          copyToClipboard( selection + getSeps() + object["short_url"] );
-	        }
-	      }
-	    };
-	  xmlhttp.send(null);
-	});
-}
-
 function copyurlwtag() {
 	chrome.tabs.getSelected(this.jstdata,function(tab) {
 	  if( tab.title ){
@@ -105,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	  document.getElementById('copyurl').addEventListener('click', copyurl);
 	  document.getElementById('copyurlAsMarkdown').addEventListener('click', copyurlAsMarkdown);
 	  document.getElementById('copytitleurl').addEventListener('click', copytitleurl);
-	  document.getElementById('copytitleurlshorten').addEventListener('click', copytitleurlshorten);
 	  document.getElementById('copyurlwtag').addEventListener('click', copyurlwtag);
 })
 
