@@ -53,9 +53,9 @@ function copytitleurl() {
 function copyurlwtag() {
 	chrome.tabs.getSelected(this.jstdata,function(tab) {
 	  if( tab.title ){
-	    copyToClipboard( "<a href=\"" + tab.url + "\" >" + tab.title + "</a>" );
+	    copyToClipboard( "<a href=\"" + tab.url + "\">" + tab.title + "</a>" );
 	  } else {
-	    copyToClipboard( "<a href=\"" + tab.url + "\" >" + tab.url + "</a>" );
+	    copyToClipboard( "<a href=\"" + tab.url + "\">" + tab.url + "</a>" );
 	  }
 	  window.close();
 	});
