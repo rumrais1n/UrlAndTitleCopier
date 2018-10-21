@@ -10,15 +10,14 @@
   },
   "description": "URLとタイトルをWebページから取得します",
   "icons": {
-    "48": "img/copyurl.png"
+    "48": "img/icon_1000.png"
   },
   "name": "URL and Title Copier",
   "permissions": [
     "tabs",
-    "http://goo.gl/*",
     "contextMenus",
     "background"
   ],
-  "version": "0.1.1",
+  "version": "0.2.0",
   "manifest_version": 2
 }
