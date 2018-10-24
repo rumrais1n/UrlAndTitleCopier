@@ -69,6 +69,7 @@ function copyurlwtag() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+	  document.getElementById('copyTitle').addEventListener('click', copyTitle);
 	  document.getElementById('copyurl').addEventListener('click', copyurl);
 	  document.getElementById('copyurlAsMarkdown').addEventListener('click', copyurlAsMarkdown);
 	  document.getElementById('copytitleurl').addEventListener('click', copytitleurl);
