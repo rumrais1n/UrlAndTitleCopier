@@ -21,6 +21,13 @@ function getSeps() {
 	return " " + sep_char + " ";
 }
 
+function copyTitle() {
+	chrome.tabs.getSelected(this.jstdata, function(tab) {
+		copyToClipboard( tab.title );
+		window.close();
+	});
+}
+
 function copyurl() {
 	chrome.tabs.getSelected(this.jstdata, function(tab) {
 	  copyToClipboard( tab.url );
