@@ -21,6 +21,13 @@ function getSeps() {
 	return " " + sep_char + " ";
 }
 
+function copyTitle() {
+	chrome.tabs.getSelected(this.jstdata, function(tab) {
+		copyToClipboard( tab.title );
+		window.close();
+	});
+}
+
 function copyurl() {
 	chrome.tabs.getSelected(this.jstdata, function(tab) {
 	  copyToClipboard( tab.url );
@@ -62,17 +69,9 @@ function copyurlwtag() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+	  document.getElementById('copytitle').addEventListener('click', copyTitle);
 	  document.getElementById('copyurl').addEventListener('click', copyurl);
 	  document.getElementById('copyurlAsMarkdown').addEventListener('click', copyurlAsMarkdown);
 	  document.getElementById('copytitleurl').addEventListener('click', copytitleurl);
 	  document.getElementById('copyurlwtag').addEventListener('click', copyurlwtag);
 })
-
-
-
-
-
-
-
-
-
