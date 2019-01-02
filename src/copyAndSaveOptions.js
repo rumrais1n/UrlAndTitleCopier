@@ -3,6 +3,11 @@ document.addEventListener( 'DOMContentLoaded', function () {
 	document.getElementById("save_button").addEventListener("click", save_options);
 });
 
+// Restore settings on option page
+window.onload = onLoad;
+function onLoad() {
+	restore_options();
+}
 
 // Saves options to localStorage.
 function save_options() {
