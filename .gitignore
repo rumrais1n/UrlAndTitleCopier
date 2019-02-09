@@ -5,3 +5,5 @@ dist/*.pem
 dist/*
 dist/
 ./makeZipPackage.sh
+webstore/*
+webstore/
