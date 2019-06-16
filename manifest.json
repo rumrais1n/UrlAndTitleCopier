@@ -14,7 +14,7 @@
   },
   "name": "URL and Title Copier",
   "permissions": [
-    "tabs",
+    "tabs"
   ],
   "version": "0.3.3",
   "manifest_version": 2
