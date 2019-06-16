@@ -15,7 +15,6 @@
   "name": "URL and Title Copier",
   "permissions": [
     "tabs",
-    "contextMenus"
   ],
   "version": "0.3.2",
   "manifest_version": 2
