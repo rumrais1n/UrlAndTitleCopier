@@ -40,3 +40,7 @@ h2 {
 	padding-bottom: 1px;
 	border-bottom: #4d4d4d 2px solid;
 }
+
+ul.collectDataList {
+	margin-left: 20px;
+}
