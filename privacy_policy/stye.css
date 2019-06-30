@@ -19,7 +19,11 @@ header {
 }
 
 article {
+	/* 余白設定 */
 	margin: 10px;
+
+	/* フォント設定 */
+	color: #4d4d4d;
 }
 
 /* 本文は少し下げる */
@@ -29,16 +33,26 @@ article {
 
 /* articleで余白とか設定するので0pxに */
 h1 {
+	/* 余白設定 */
 	margin: 0px;
+
+	/* フォント設定 */
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 500;
 }
 
 h2 {
+	/* 余白設定 */
 	margin: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 1px;
 	border-bottom: #4d4d4d 2px solid;
+
+	/* フォント設定 */
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 400;
 }
 
 ul.collectDataList {
