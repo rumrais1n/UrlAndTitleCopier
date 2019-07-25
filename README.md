@@ -1,6 +1,11 @@
 # URL and Title Copier
-WebページのタイトルとURLをコピーするChrome拡張
+WebページのタイトルとURLをコピーするChrome拡張。  
+MITライセンスで配布されている"[Copy Url Title to clipboard](https://github.com/ldong/copy_title_url)"の機能拡張及びバグ修正版となります。
 
-Copy Url Title to clipboard([Chrome Webストア](https://chrome.google.com/webstore/detail/copy-url-title-to-clipboa/fphedfdnajgljnfadpekgjglaemgkfgb))([ソースコード](https://github.com/ldong/copy_title_url))の改造版
+"[Copy Url Title to clipboard](https://github.com/ldong/copy_title_url)"との差分は下記の通りです。
 
-手っ取り早っく動く拡張が欲しい人は`release`タブを参照してください。
+- 🐛goo.glでのURL短縮機能の削除
+- 🐛オプション画面で"string"以外の設定にしても反映されない問題の修正
+- 🐛現在の設定内容がオプション画面に反映されない問題の修正
+- ✨タイトルのみをコピーする機能の追加
+
