@@ -57,6 +57,17 @@ function copytitleurl() {
 	});
 }
 
+function copytitleurlWithGt() {
+	chrome.tabs.getSelected(this.jstdata, function(tab) {
+		if( tab.title ){
+			copyToClipboard( ">" + tab.title + getSeps() + tab.url );
+		} else {
+			copyToClipboard( ">" + tab.url );
+		}
+		window.close();
+	});
+}
+
 function copyurlwtag() {
 	chrome.tabs.getSelected(this.jstdata,function(tab) {
 	  if( tab.title ){
@@ -73,5 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	  document.getElementById('copyurl').addEventListener('click', copyurl);
 	  document.getElementById('copyurlAsMarkdown').addEventListener('click', copyurlAsMarkdown);
 	  document.getElementById('copytitleurl').addEventListener('click', copytitleurl);
+	  document.getElementById('copytitleurlwithGt').addEventListener('click', copytitleurlWithGt);
 	  document.getElementById('copyurlwtag').addEventListener('click', copyurlwtag);
 })
