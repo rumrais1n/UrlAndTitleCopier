@@ -60,9 +60,9 @@ function copytitleurl() {
 function copytitleurlWithGt() {
 	chrome.tabs.getSelected(this.jstdata, function(tab) {
 		if( tab.title ){
-			copyToClipboard( ">" + tab.title + getSeps() + tab.url );
+			copyToClipboard( "> " + tab.title + getSeps() + "> " + tab.url );
 		} else {
-			copyToClipboard( ">" + tab.url );
+			copyToClipboard( "> " + tab.url );
 		}
 		window.close();
 	});
