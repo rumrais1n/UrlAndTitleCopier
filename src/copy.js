@@ -22,21 +22,24 @@ function getSeps() {
 }
 
 function copyTitle() {
-	chrome.tabs.getSelected(this.jstdata, function(tab) {
+	let queryOptions = {active: true, lastFocusedWindow: true};
+	chrome.tabs.query(queryOptions, ([tab]) => {
 		copyToClipboard( tab.title );
 		window.close();
 	});
 }
 
 function copyurl() {
-	chrome.tabs.getSelected(this.jstdata, function(tab) {
+	let queryOptions = {active: true, lastFocusedWindow: true};
+	chrome.tabs.query(queryOptions, ([tab]) => {
 	  copyToClipboard( tab.url );
 	  window.close();
 	});
 }
 
 function copyurlAsMarkdown() {
-	chrome.tabs.getSelected(this.jstdata, function(tab) {
+	let queryOptions = {active: true, lastFocusedWindow: true};
+	chrome.tabs.query(queryOptions, ([tab]) => {
 	  if( tab.title ){
 	    copyToClipboard('['+tab.title+']'+'('+tab.url+')');
 	  } else {
@@ -47,7 +50,8 @@ function copyurlAsMarkdown() {
 }
 
 function copytitleurl() {
-	chrome.tabs.getSelected(this.jstdata, function(tab) {
+	let queryOptions = {active: true, lastFocusedWindow: true};
+	chrome.tabs.query(queryOptions, ([tab]) => {
 	  if( tab.title ){
 	    copyToClipboard( tab.title + getSeps() + tab.url );
 	  } else {
@@ -58,7 +62,8 @@ function copytitleurl() {
 }
 
 function copytitleurlWithGt() {
-	chrome.tabs.getSelected(this.jstdata, function(tab) {
+	let queryOptions = {active: true, lastFocusedWindow: true};
+	chrome.tabs.query(queryOptions, ([tab]) => {
 		if( tab.title ){
 			copyToClipboard( "> " + tab.title + getSeps() + "> " + tab.url );
 		} else {
@@ -69,7 +74,8 @@ function copytitleurlWithGt() {
 }
 
 function copyurlwtag() {
-	chrome.tabs.getSelected(this.jstdata,function(tab) {
+	let queryOptions = {active: true, lastFocusedWindow: true};
+	chrome.tabs.query(queryOptions, ([tab]) => {
 	  if( tab.title ){
 	    copyToClipboard( "<a href=\"" + tab.url + "\">" + tab.title + "</a>" );
 	  } else {
